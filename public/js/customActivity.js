@@ -79,15 +79,17 @@ define([
         console.log('[save] templateName', templateName);
 
         payload.name = "Send Whatsapp HSM";
+
+        // payload['metaData'] = payload['metaData'] || {};
+        // payload['configurationArguments'] = payload['configurationArguments'] || {};
+
         payload['arguments'] = payload['arguments'] || {};
         payload['arguments'].templateName = templateName;
         payload['arguments'].execute.inArguments = [{ "message": templateName }];
-
-        payload['metaData'] = payload['metaData'] || {};
-        
-        payload['configurationArguments'] = payload['configurationArguments'] || {};
+        payload['metaData'].isConfigured = true;
 
         console.log('payload', payload);
+        console.log('payload arguments', payload['arguments']);
 
         connection.trigger('updateActivity', payload);
     }
