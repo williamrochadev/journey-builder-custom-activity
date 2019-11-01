@@ -22,10 +22,10 @@ define([
         connection.trigger('requestEndpoints');
 
         $('#toggleActive').click(function () {
-            templateName = $('#templateCode').val();
             document.getElementById('templateCode').disabled = true;
-            document.getElementById('toggleActive').innerHTML = "Ativado";
+            templateName = $('#templateCode').val();
             document.getElementById('toggleActive').disabled = true;
+            document.getElementById('toggleActive').innerHTML = "Ativado";
 
             console.log('templateName', templateName);
         });
@@ -34,6 +34,15 @@ define([
     function initialize(data) {
         if (data) {
             payload = data;
+        }
+
+        console.log('data', data);
+
+        if (templateName) {
+            document.getElementById('templateCode').disabled = true;
+            document.getElementById('templateCode').value = templateName;
+            document.getElementById('toggleActive').disabled = true;
+            document.getElementById('toggleActive').innerHTML = "Ativado";
         }
 
         var hasInArguments = Boolean(
