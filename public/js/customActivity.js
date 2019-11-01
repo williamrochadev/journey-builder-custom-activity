@@ -36,6 +36,8 @@ define([
             payload = data;
         }
 
+        templateName = payload['arguments'].templateName;
+
         console.log('data', data);
         console.log('[initialize] templateName', templateName);
         console.log('arguments', payload['arguments'])
@@ -77,8 +79,13 @@ define([
         console.log('[save] templateName', templateName);
 
         payload.name = "Send Whatsapp HSM";
-        payload['arguments'].execute.inArguments = [{ "message": templateName }];
-        payload['metaData'].isConfigured = true;
+        // payload['arguments'].execute.inArguments = [{ "message": templateName }];
+        payload['arguments'] = payload['arguments'] || {};
+        payload['arguments'].templateName = templateName;
+
+        payload['metaData'] = payload['metaData'] || {};
+        
+        payload['configurationArguments'] = payload['configurationArguments'] || {};
 
         console.log('payload', payload);
 
