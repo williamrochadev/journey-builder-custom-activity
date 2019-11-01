@@ -66,6 +66,7 @@ define([
 
     function save() {
         var templateCode = $('#templateCode').val();
+        console.log(templateCode)
 
         payload.name = "whatsapphsm";
         payload['arguments'].execute.inArguments = [{ "message": templateCode }];
