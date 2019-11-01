@@ -6,7 +6,6 @@ define([
     'use strict';
 
     var connection = new Postmonger.Session();
-    var authTokens = {};
     var payload = {};
     var templateName = "";
     $(window).ready(onRender);
@@ -22,12 +21,13 @@ define([
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
 
-        $('#toggleActive').click(function() {
+        $('#toggleActive').click(function () {
             templateName = $('#templateCode').val();
             document.getElementById('templateCode').disabled = true;
+            document.getElementById('toggleActive').innerHTML = "Ativado";
             document.getElementById('toggleActive').disabled = true;
-            document.getElementById('toggleActive').value = "Ativado";
-            console.log(templateName);
+
+            console.log('templateName', templateName);
         });
     }
 
@@ -35,8 +35,6 @@ define([
         if (data) {
             payload = data;
         }
-
-        var message;
 
         var hasInArguments = Boolean(
             payload['arguments'] &&
@@ -47,15 +45,7 @@ define([
 
         var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
 
-        console.log(inArguments);
-
-        $.each(inArguments, function (index, inArgument) {
-            $.each(inArgument, function (key, val) {
-                if (key === 'message') {
-                    message = val;
-                }
-            });
-        });
+        console.log('inArguments', inArguments);
 
         connection.trigger('updateButton', {
             button: 'next',
@@ -65,21 +55,21 @@ define([
     }
 
     function onGetTokens(tokens) {
-        console.log(tokens);
-        authTokens = tokens;
+        console.log('tokens', tokens);
     }
 
     function onGetEndpoints(endpoints) {
-        console.log(endpoints);
+        console.log('endpoints', endpoints);
     }
 
     function save() {
-        var templateCode = $('#templateCode').val();
-        console.log(templateCode)
+        console.log('templateName', templateName);
 
         payload.name = "whatsapphsm";
-        payload['arguments'].execute.inArguments = [{ "message": templateCode }];
+        payload['arguments'].execute.inArguments = [{ "message": templateName }];
         payload['metaData'].isConfigured = true;
+
+        console.log('payload', payload);
 
         connection.trigger('updateActivity', payload);
     }
