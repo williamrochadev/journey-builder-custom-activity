@@ -79,9 +79,9 @@ define([
         console.log('[save] templateName', templateName);
 
         payload.name = "Send Whatsapp HSM";
-        // payload['arguments'].execute.inArguments = [{ "message": templateName }];
         payload['arguments'] = payload['arguments'] || {};
         payload['arguments'].templateName = templateName;
+        payload['arguments'].execute.inArguments = [{ "message": templateName }];
 
         payload['metaData'] = payload['metaData'] || {};
         
