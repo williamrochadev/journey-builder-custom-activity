@@ -79,7 +79,6 @@ exports.execute = function (req, res) {
     console.log('execute request!');
 
     logData(req);
-    console.log(req.body);
 
     res.send(200, 'Execute');
 
