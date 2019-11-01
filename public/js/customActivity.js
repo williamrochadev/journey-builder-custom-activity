@@ -8,6 +8,7 @@ define([
     var connection = new Postmonger.Session();
     var authTokens = {};
     var payload = {};
+    var templateName = "";
     $(window).ready(onRender);
 
     connection.on('initActivity', initialize);
@@ -20,6 +21,11 @@ define([
         connection.trigger('ready');
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
+
+        $('#toggleActive').click(function() {
+            templateName = $('#templateCode').val();
+            console.log(templateName);
+        });
     }
 
     function initialize(data) {
