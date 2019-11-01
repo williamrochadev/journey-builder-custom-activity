@@ -24,6 +24,9 @@ define([
 
         $('#toggleActive').click(function() {
             templateName = $('#templateCode').val();
+            $('#templateCode').readOnly = true;
+            $('#toggleActive').readOnly = true;
+            $('#toggleActive').text = 'Ativado';
             console.log(templateName);
         });
     }
