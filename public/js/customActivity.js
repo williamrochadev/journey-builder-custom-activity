@@ -74,7 +74,7 @@ define([
     function save() {
         console.log('templateName', templateName);
 
-        payload.name = "whatsapphsm";
+        payload.name = "Send Whatsapp HSM";
         payload['arguments'].execute.inArguments = [{ "message": templateName }];
         payload['metaData'].isConfigured = true;
 
