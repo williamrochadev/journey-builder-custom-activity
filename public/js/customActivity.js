@@ -27,7 +27,7 @@ define([
             document.getElementById('toggleActive').disabled = true;
             document.getElementById('toggleActive').innerHTML = "Ativado";
 
-            console.log('templateName', templateName);
+            console.log('[onRender] templateName', templateName);
         });
     }
 
@@ -37,6 +37,7 @@ define([
         }
 
         console.log('data', data);
+        console.log('[initialize] templateName', templateName);
 
         if (templateName) {
             document.getElementById('templateCode').disabled = true;
@@ -72,7 +73,7 @@ define([
     }
 
     function save() {
-        console.log('templateName', templateName);
+        console.log('[save] templateName', templateName);
 
         payload.name = "Send Whatsapp HSM";
         payload['arguments'].execute.inArguments = [{ "message": templateName }];
