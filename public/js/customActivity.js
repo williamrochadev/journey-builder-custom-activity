@@ -38,6 +38,7 @@ define([
 
         console.log('data', data);
         console.log('[initialize] templateName', templateName);
+        console.log('arguments', payload['arguments'])
 
         if (templateName) {
             document.getElementById('templateCode').disabled = true;
