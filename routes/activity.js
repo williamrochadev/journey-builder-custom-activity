@@ -80,8 +80,6 @@ exports.execute = function (req, res) {
 
     logData(req);
 
-    res.send(200, 'Execute');
-
     // example on how to decode JWT
     JWT(req.body, process.env.jwtSecret, (err, decoded) => {
 
