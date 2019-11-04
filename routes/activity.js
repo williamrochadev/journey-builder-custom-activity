@@ -78,9 +78,9 @@ exports.save = function (req, res) {
 exports.execute = function (req, res) {
     console.log('execute request!');
 
-    logData(req);
+    console.log('jwtSecret', process.env.jwtSecret);
 
-    logData('jwtSecret', process.env.jwtSecret);
+    logData(req);
 
     // example on how to decode JWT
     JWT(req.body, process.env.jwtSecret, (err, decoded) => {
