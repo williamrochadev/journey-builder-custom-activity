@@ -6,6 +6,7 @@ define([
     'use strict';
 
     var connection = new Postmonger.Session();
+    var authTokens = {};
     var payload = {};
     var templateName = "";
     $(window).ready(onRender);
@@ -69,6 +70,7 @@ define([
 
     function onGetTokens(tokens) {
         console.log('tokens', tokens);
+        authTokens = tokens;
     }
 
     function onGetEndpoints(endpoints) {
@@ -80,12 +82,13 @@ define([
 
         payload.name = "Send Whatsapp HSM";
 
-        // payload['metaData'] = payload['metaData'] || {};
-        // payload['configurationArguments'] = payload['configurationArguments'] || {};
-
         payload['arguments'] = payload['arguments'] || {};
         payload['arguments'].templateName = templateName;
-        payload['arguments'].execute.inArguments = [{ "message": templateName }];
+        payload['arguments'].execute.inArguments = [{
+            "tokens": authTokens,
+            "templateName": templateName
+        }];
+        
         payload['metaData'].isConfigured = true;
 
         console.log('payload', payload);

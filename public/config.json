@@ -27,21 +27,36 @@
         }
       ],
       "outArguments": [],
-      "url": "https://journey-salesforce.herokuapp.com/journeybuilder/execute"
+      "url": "https://journey-salesforce.herokuapp.com/journeybuilder/execute",
+      "verb": "POST",
+      "body": "",
+      "header": "",
+      "format": "json",
+      "useJwt": true,
+      "timeout": 10000
     }
   },
   "configurationArguments": {
+    "applicationExtensionKey": "045ae7c7-daf3-467c-b57d-7d0fe3634ce2",
     "save": {
-      "url": "https://journey-salesforce.herokuapp.com/journeybuilder/save"
+      "url": "https://journey-salesforce.herokuapp.com/journeybuilder/save",
+      "verb": "POST",
+      "useJwt": true
     },
     "publish": {
-      "url": "https://journey-salesforce.herokuapp.com/journeybuilder/publish"
+      "url": "https://journey-salesforce.herokuapp.com/journeybuilder/publish",
+      "verb": "POST",
+      "useJwt": true
     },
     "validate": {
-      "url": "https://journey-salesforce.herokuapp.com/journeybuilder/validate"
+      "url": "https://journey-salesforce.herokuapp.com/journeybuilder/validate",
+      "verb": "POST",
+      "useJwt": true
     },
     "stop": {
-      "url": "https://journey-salesforce.herokuapp.com/journeybuilder/stop"
+      "url": "https://journey-salesforce.herokuapp.com/journeybuilder/stop",
+      "verb": "POST",
+      "useJwt": true
     }
   },
   "wizardSteps": [
