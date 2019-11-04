@@ -93,6 +93,7 @@ define([
 
         console.log('payload', payload);
         console.log('payload arguments', payload['arguments']);
+        console.log('payload stringfy', JSON.stringify(payload));
 
         connection.trigger('updateActivity', payload);
     }
