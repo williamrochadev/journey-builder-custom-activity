@@ -1,5 +1,4 @@
 {
-  "key": "045ae7c7-daf3-467c-b57d-7d0fe3634ce2",
   "workflowApiVersion": "1.1",
   "metaData": {
     "icon": "images/whatsapp.png",
@@ -38,7 +37,7 @@
     }
   },
   "configurationArguments": {
-    "applicationExtensionKey": "045ae7c7-daf3-467c-b57d-7d0fe3634ce2",
+    "applicationExtensionKey": "__045ae7c7-daf3-467c-b57d-7d0fe3634ce2__",
     "save": {
       "url": "https://journey-salesforce.herokuapp.com/journeybuilder/save",
       "verb": "POST",
