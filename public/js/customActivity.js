@@ -71,9 +71,9 @@ define(function (require) {
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
             "contactIdentifier": "{{Contact.Key}}",
-            "phoneNumber": "{{Account.Phone}}",
-            // "phoneNumber": `{{Event.${eventDefinitionKey}.\"Phone\"}}`,
-            "templateName": templateName
+            "phoneNumber": `{{Event.${eventDefinitionKey}.\"Phone\"}}`,
+            "templateName": templateName,
+            "other": "{{InteractionDefaults.Email}}",
         }];
 
         payload['metaData'].isConfigured = true;
