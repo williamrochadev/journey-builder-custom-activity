@@ -68,17 +68,20 @@ define(function (require) {
     function save() {
         payload['arguments'].templateName = templateName;
 
+        var contato = "{{Contact.Key}}";
+
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
             "contactIdentifier": "{{Contact.Key}}",
-            "phoneNumber": "{{Contact.Attribute.Persona.MobilePhone}}",
+            "phoneNumber": "{{Contact}}",
             // "phoneNumber": `{{Event.${eventDefinitionKey}.\"Phone\"}}`,
             "templateName": templateName
         }];
 
         payload['metaData'].isConfigured = true;
 
-        console.log(JSON.stringify(payload));
+        console.log('payload', JSON.stringify(payload));
+        console.log('contato', JSON.stringify(contato));
 
         connection.trigger('updateActivity', payload);
     }
