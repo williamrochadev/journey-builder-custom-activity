@@ -37,7 +37,7 @@ define(function (require) {
             payload = data;
         }
 
-        templateName = payload['arguments'].execute.inArguments['templateName'];
+        templateName = payload['arguments'].templateName;
 
         if (templateName) {
             document.getElementById('templateCode').disabled = true;
@@ -67,6 +67,8 @@ define(function (require) {
     }
 
     function save() {
+        payload['arguments'].templateName = templateName;
+
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
             "contactIdentifier": "{{Contact.Key}}",
