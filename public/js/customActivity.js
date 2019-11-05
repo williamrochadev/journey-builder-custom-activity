@@ -36,6 +36,7 @@ define([
     function requestedInteractionHandler(settings) {
         try {
             eventDefinitionKey = settings.triggers[0].metaData.eventDefinitionKey;
+            console.log('eventDefinitionKey', eventDefinitionKey);
             $('#select-entryevent-defkey').val(eventDefinitionKey);
 
             if (settings.triggers[0].type === 'SalesforceObjectTriggerV2' &&

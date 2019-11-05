@@ -53,14 +53,16 @@
                         <div class="col-md-4 col-md-offset-4 col-sm6-6 col-sm-offset-3 ">
                             <form class="form-inline" role="form">
                                 <div class="form-group">
-                                    <label class="sr-only" for="eventDefinitionKey">Código da jornada</label>
-                                    <input type="text" id="select-entryevent-defkey" class="form-control transparent"
-                                        placeholder="código da jornada" required="required" disabled="disabled">
+                                    <label class="sr-only" for="select-entryevent-defkey">Código da jornada</label>
+                                    <input type="text" id="select-entryevent-defkey" class="space form-control transparent"
+                                        placeholder="código da jornada" required="required" disabled="disabled"
+                                        minlength="1">
                                     <label class="sr-only" for="templateCode">Código do template</label>
-                                    <input type="text" id="templateCode" class="form-control transparent"
+                                    <input type="text" id="templateCode" class="space form-control transparent"
                                         required="required" placeholder="código do template">
+                                    <button id="toggleActive" type="button"
+                                        class="space btn btn-danger btn-fill">Ativar</button>
                                 </div>
-                                <button id="toggleActive" type="button" class="btn btn-danger btn-fill">Ativar</button>
                             </form>
 
                         </div>

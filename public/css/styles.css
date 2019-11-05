@@ -789,6 +789,9 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
 .footer .coffee{
     color: #FFFFFF;
 }
+.space {
+    margin: 5px
+}
 
 @media (min-width:219px){        
     .main .subscribe .form-group{
@@ -800,7 +803,7 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
 }
 @media (min-width:768px){        
     .main .subscribe .form-inline .btn{
-        width: auto;
+        /* width: auto; */
     }   
 }
 @media (min-width:991px){        
