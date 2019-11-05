@@ -73,7 +73,7 @@ define(function (require) {
             "contactIdentifier": "{{Contact.Key}}",
             "phoneNumber": `{{Event.${eventDefinitionKey}.\"Phone\"}}`,
             "templateName": templateName,
-            "celularCompleto": "{{Context.Jb_Teste_WhatsApp_Celular_Completo_MKT_Cloud__c}}"
+            "celularCompleto": "{{Context.Jb_Teste_WhatsApp._Celular_Completo_MKT_Cloud__c}}"
         }];
 
         payload['metaData'].isConfigured = true;
