@@ -68,12 +68,10 @@ define(function (require) {
     function save() {
         payload['arguments'].templateName = templateName;
 
-        var contato = "{{Contact.Key}}";
-
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
             "contactIdentifier": "{{Contact.Key}}",
-            "phoneNumber": "{{Contact.Default.PhoneNumber}}",
+            "phoneNumber": "{{Account.Phone}}",
             // "phoneNumber": `{{Event.${eventDefinitionKey}.\"Phone\"}}`,
             "templateName": templateName
         }];
