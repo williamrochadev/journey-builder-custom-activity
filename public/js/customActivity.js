@@ -19,7 +19,6 @@ define(function (require) {
     connection.on('clickedNext', save);
 
     function onRender() {
-        // JB will respond the first time 'ready' is called with 'initActivity'
         connection.trigger('ready');
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
@@ -60,9 +59,7 @@ define(function (require) {
     function requestedInteractionHandler(settings) {
         try {
             eventDefinitionKey = settings.triggers[0].metaData.eventDefinitionKey;
-            // $('#select-entryevent-defkey').val(eventDefinitionKey);
             document.getElementById('select-entryevent-defkey').value = eventDefinitionKey;
-            console.log('eventDefinitionKey', eventDefinitionKey);
         } catch (err) {
             console.error(err);
         }
