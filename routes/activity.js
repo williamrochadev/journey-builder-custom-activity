@@ -68,6 +68,9 @@ exports.execute = function (req, res) {
             console.log('inArguments', JSON.stringify(decoded.inArguments));
             console.log('decodedArgs', JSON.stringify(decodedArgs));
 
+            console.log('contact', decodedArgs['phoneNumber']);
+            console.log('contact inspect', util.inspect(decodedArgs['phoneNumber']));            
+
             logData(req);
             res.send(200, 'Execute');
         } else {
