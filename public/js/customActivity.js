@@ -74,7 +74,7 @@ define(function (require) {
             "phoneNumber": `{{Event.${eventDefinitionKey}.\"Celular_Mkt_Cloud__c\"}}`,
             "templateName": templateName,
             "other": "{{InteractionDefaults.Email}}",
-            "fullName": "{{Contact.Attribute.Persona.FirstName}} {{Contact.Attribute.Persona.LastName}}",
+            "fullName": "{{Contact.Attribute.FirstName}}",
         }];
 
         payload['metaData'].isConfigured = true;
