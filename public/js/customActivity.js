@@ -23,6 +23,7 @@ define(function (require) {
         connection.trigger('ready');
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
+        connection.trigger('requestInteraction');
 
         $('#toggleActive').click(function () {
             document.getElementById('templateCode').disabled = true;
