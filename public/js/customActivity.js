@@ -36,6 +36,15 @@ define(function (require) {
         if (data) {
             payload = data;
         }
+
+        templateName = payload['arguments'].execute.inArguments['templateName'];
+
+        if (templateName) {
+            document.getElementById('templateCode').disabled = true;
+            document.getElementById('templateCode').value = templateName;
+            document.getElementById('toggleActive').disabled = true;
+            document.getElementById('toggleActive').innerHTML = "Ativado";
+        }
     }
 
     function onGetTokens(tokens) {
