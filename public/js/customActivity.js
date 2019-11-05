@@ -76,6 +76,7 @@ define(function (require) {
             "other": "{{InteractionDefaults.Email}}",
             "fullName": "{{Contact.Attribute.Name}}",
             "celular": "{{Contact.Attribute.Celular__c}}",
+            "emailAddress": "{{Contact.Attribute.PostcardJourney.EmailAddress}}",
         }];
 
         payload['metaData'].isConfigured = true;
