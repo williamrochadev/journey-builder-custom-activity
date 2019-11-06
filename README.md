@@ -12,6 +12,7 @@
 
 ### 🚀 Funcionalidades
 
+* 📬 [Template](https://github.com/lennonalvesdias/journey-builder-custom-activity/tree/template)
 * 📬 [Disparo de WhatsApp HSM](https://github.com/lennonalvesdias/journey-builder-custom-activity/tree/whatsapp-hsm)
 
 ## 👨‍🏫 Como usar
