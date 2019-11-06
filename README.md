@@ -12,7 +12,7 @@
 
 ### 🚀 Funcionalidades
 
-* 📬 [Disparo de WhatsApp HSM](/tree/poc)
+* 📬 [Disparo de WhatsApp HSM](https://github.com/lennonalvesdias/journey-builder-custom-activity/tree/whatsapp-hsm)
 
 ## 👨‍🏫 Como usar
 
