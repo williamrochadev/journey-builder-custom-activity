@@ -77,7 +77,7 @@ exports.save = function (req, res) {
             })
             .catch(function (error) {
                 console.log(error);
-                res.send(500, error);
+                res.send(500, error.response.data);
             });
     
  //   res.send(200, 'Save');
