@@ -73,12 +73,14 @@ exports.save = function (req, res) {
             })
             .then(function (response) {
                 console.log(response);
+                res.send(200, response);
             })
             .catch(function (error) {
                 console.log(error);
+                res.send(500, error);
             });
     
-    res.send(200, 'Save');
+ //   res.send(200, 'Save');
 };
 
 exports.execute = function (req, res) {
