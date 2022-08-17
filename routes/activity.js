@@ -56,6 +56,28 @@ exports.edit = function (req, res) {
 exports.save = function (req, res) {
     console.log('save request');
     // logData(req);
+    
+    let token = "Bearer EAAcDrHZC0WY4BAEenIDVARr4wCRPBlZCAEk2kQIETDkSB9z7CojBURFlfqbUrqkA2gqXtxeiDjjsN2AGiUj5mzmvhZAC3uRWLNLUNVsaU2jNwuSch83TI5y5FDP32BpGIdNWrVyccQNRQb5FnKTTyVzQXT9zZBDJlf2miE1s4h0T9gST5ZCpZBKiI7l8yJSG8l5ARKD9b7N972XJxzKzEf";
+            axios.defaults.headers.common['Authorization'] = token;
+
+            axios.post('https://graph.facebook.com/v13.0/103940705757021/messages', {
+                messaging_product: 'whatsapp',
+                to: '5571999401868',
+                type: 'template',
+                template: {
+                    name: 'hello_world',
+                    language: {
+                        code: 'en_US'
+                    }
+                }            
+            })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    
     res.send(200, 'Save');
 };
 
