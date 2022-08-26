@@ -21,7 +21,7 @@
                 }									
 			],
           "outArguments": [],
-          "url": "https://semob-solutis.herokuapp.com/journeybuilder/execute",
+          "url": "https://semob-template.herokuapp.com/journeybuilder/execute",
            "verb": "POST",
             "body": "",
             "header": "",
@@ -33,22 +33,22 @@
     "configurationArguments": {
       "applicationExtensionKey": "443eb725-e84e-4f67-8d45-6de3cdbca3c3",
       "save": {
-        "url": "https://semob-solutis.herokuapp.com/journeybuilder/save",
+        "url": "https://semob-template.herokuapp.com/journeybuilder/save",
           "verb": "POST",
         "useJwt": true
        },
        "publish": {
-        "url": "https://semob-solutis.herokuapp.com/journeybuilder/publish",
+        "url": "https://semob-template.herokuapp.com/journeybuilder/publish",
            "verb": "POST",
         "useJwt": true
        },
       "stop": {
-        "url": "https://semob-solutis.herokuapp.com/journeybuilder/stop",
+        "url": "https://semob-template.herokuapp.com/journeybuilder/stop",
            "verb": "POST",
         "useJwt": true
       },
       "validate": {
-        "url": "https://semob-solutis.herokuapp.com/journeybuilder/validate",
+        "url": "https://semob-template.herokuapp.com/journeybuilder/validate",
         "verb": "POST",
         "useJwt": true
       }
